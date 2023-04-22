@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./question.component.css']
 })
 export class QuestionComponent implements OnInit {
-
+  public name : string="";
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit(): void {
+    this.name = localStorage.getItem("name")!;
   }
 
 }

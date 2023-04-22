@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-welcom',
@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./welcom.component.css']
 })
 export class WelcomComponent implements OnInit {
-
+  @ViewChild('name') nameKey!: ElementRef;
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit(): void {
+  }
+  startQuiz(){
+    localStorage.setItem("name", this.nameKey.nativeElement.value);
   }
 
 }
