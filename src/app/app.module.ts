@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -8,7 +9,7 @@ import { QuestionComponent } from './question/question.component';
 import { HeaderComponent } from './header/header.component';
 
 @NgModule({
-  declarations: [	
+  declarations: [
     AppComponent,
       WelcomComponent,
       QuestionComponent,
@@ -16,7 +17,8 @@ import { HeaderComponent } from './header/header.component';
    ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

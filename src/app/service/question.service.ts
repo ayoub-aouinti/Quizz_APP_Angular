@@ -1,9 +1,14 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from "@angular/common/http";
 
 @Injectable({
   providedIn: 'root'
 })
 export class QuestionService {
 
-  constructor() { }
+  constructor(private http : HttpClient) { }
+
+  getQuestionJason(){
+    return this.http.get<any>("assets/questions.json");
+  }
 }
